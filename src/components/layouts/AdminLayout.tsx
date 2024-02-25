@@ -1,35 +1,40 @@
 
-import { Layout, Menu, MenuProps } from 'antd';
-import { Outlet } from 'react-router-dom';
+import { Layout, Menu, } from 'antd';
+import {  Outlet } from 'react-router-dom';
+import { adminSidebarItems } from '../../routes/admin.routes';
 // import { createElement } from 'react';
 
 const { Header, Content, Footer, Sider } = Layout;
 
 
-const items: MenuProps["items"] = [
-  {
-    key: 1,
-    label: 'Dashboard'
-  },
-  {
-    key: 2,
-    label: 'Profile'
-  },
-  {
-    key: 3,
-    label: 'User management',
-    children: [
-      {
-        key: 22,
-        label: 'Create admin'
-      },
-      {
-        key: 33,
-        label: 'Create student'
-      },
-    ]
-  },
-]
+// const items: MenuProps["items"] = [
+//   {
+//     key: 'Dashboard',
+//     label: <NavLink to='/admin/dashboard'>Dashboard</NavLink> 
+//   },
+  
+//   {
+//     key: 'User Management',
+//     label: 'User management',
+//     children: [
+//       {
+//         key: 'Create Admin',
+//         label: <NavLink to='/admin/create-admin'>Create admin</NavLink> 
+//       },
+//       {
+//         key: 'Create faculty',
+//         label: <NavLink to='/admin/create-faculty'>Create faculty</NavLink> 
+//       },
+//       {
+//         key: 'Create student',
+//         label: <NavLink to='/admin/create-student'>Create student</NavLink> 
+//       },
+      
+     
+     
+//     ]
+//   },
+// ]
 
 const AdminLayout = () => {
   return (
@@ -53,7 +58,7 @@ const AdminLayout = () => {
         }} >
           <h1>PH Uni</h1>
         </div>
-        <Menu theme="dark" mode="inline" defaultSelectedKeys={['4']} items={items} />
+        <Menu theme="dark" mode="inline" defaultSelectedKeys={['4']} items={adminSidebarItems} />
       </Sider>
       <Layout style={{height : '100vh'}}>
         <Header style={{ padding: 0 }} />
