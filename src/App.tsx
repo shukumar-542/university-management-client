@@ -1,9 +1,10 @@
 import AdminLayout from "./components/layouts/AdminLayout"
+import { ProtectedRoute } from "./components/layouts/ProtectedRoute"
 
 function App() {
   
 
-  return <AdminLayout />
+  return <ProtectedRoute><AdminLayout /></ProtectedRoute>
 }
 
 export default App
